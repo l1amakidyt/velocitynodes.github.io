@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Management</title>
+</head>
+<body>
+    <h2>Account Management</h2>
+    <form action="account.php" method="POST" enctype="multipart/form-data">
+        <label>New Email:</label>
+        <input type="email" name="new_email">
+        <br>
+        <button type="submit" name="update_email">Update Email</button>
+        <br>
+
+        <label>New Password:</label>
+        <input type="password" name="new_password">
+        <br>
+        <button type="submit" name="update_password">Update Password</button>
+        <br>
+
+        <label>Upload Profile Picture:</label>
+        <input type="file" name="profile_picture">
+        <br>
+        <button type="submit">Update Profile Picture</button>
+    </form>
+
+    <h3>Your Profile Picture</h3>
+    <img src="<?php echo $_SESSION['profile_picture']; ?>" alt="Profile Picture" width="100">
+</body>
+</html>
